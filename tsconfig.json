@@ -2,6 +2,23 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@form-gen/admin-ui": [
+        "dist/form-gen/admin-ui"
+      ],
+      "@form-gen/betterco-blocks": [
+        "dist/form-gen/betterco-blocks"
+      ],
+      "@form-gen/common-blocks": [
+        "dist/form-gen/common-blocks"
+      ],
+      "@form-gen/core": [
+        "dist/form-gen/core"
+      ],
+      "@form-gen/editor-blocks": [
+        "dist/form-gen/editor-blocks"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

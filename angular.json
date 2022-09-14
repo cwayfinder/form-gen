@@ -3,5 +3,260 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@form-gen/core": {
+      "projectType": "library",
+      "root": "projects/form-gen/core",
+      "sourceRoot": "projects/form-gen/core/src",
+      "prefix": "fg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/form-gen/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/form-gen/core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/form-gen/core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/form-gen/core/src/test.ts",
+            "tsConfig": "projects/form-gen/core/tsconfig.spec.json",
+            "karmaConfig": "projects/form-gen/core/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@form-gen/common-blocks": {
+      "projectType": "library",
+      "root": "projects/form-gen/common-blocks",
+      "sourceRoot": "projects/form-gen/common-blocks/src",
+      "prefix": "fgc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/form-gen/common-blocks/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/form-gen/common-blocks/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/form-gen/common-blocks/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/form-gen/common-blocks/src/test.ts",
+            "tsConfig": "projects/form-gen/common-blocks/tsconfig.spec.json",
+            "karmaConfig": "projects/form-gen/common-blocks/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@form-gen/editor-blocks": {
+      "projectType": "library",
+      "root": "projects/form-gen/editor-blocks",
+      "sourceRoot": "projects/form-gen/editor-blocks/src",
+      "prefix": "fge",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/form-gen/editor-blocks/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/form-gen/editor-blocks/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/form-gen/editor-blocks/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/form-gen/editor-blocks/src/test.ts",
+            "tsConfig": "projects/form-gen/editor-blocks/tsconfig.spec.json",
+            "karmaConfig": "projects/form-gen/editor-blocks/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@form-gen/betterco-blocks": {
+      "projectType": "library",
+      "root": "projects/form-gen/betterco-blocks",
+      "sourceRoot": "projects/form-gen/betterco-blocks/src",
+      "prefix": "fgb",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/form-gen/betterco-blocks/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/form-gen/betterco-blocks/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/form-gen/betterco-blocks/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/form-gen/betterco-blocks/src/test.ts",
+            "tsConfig": "projects/form-gen/betterco-blocks/tsconfig.spec.json",
+            "karmaConfig": "projects/form-gen/betterco-blocks/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@form-gen/admin-ui": {
+      "projectType": "library",
+      "root": "projects/form-gen/admin-ui",
+      "sourceRoot": "projects/form-gen/admin-ui/src",
+      "prefix": "fga",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/form-gen/admin-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/form-gen/admin-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/form-gen/admin-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/form-gen/admin-ui/src/test.ts",
+            "tsConfig": "projects/form-gen/admin-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/form-gen/admin-ui/karma.conf.js"
+          }
+        }
+      }
+    },
+    "demo-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/demo-app",
+      "sourceRoot": "projects/demo-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/demo-app",
+            "index": "projects/demo-app/src/index.html",
+            "main": "projects/demo-app/src/main.ts",
+            "polyfills": "projects/demo-app/src/polyfills.ts",
+            "tsConfig": "projects/demo-app/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/demo-app/src/favicon.ico",
+              "projects/demo-app/src/assets"
+            ],
+            "styles": [
+              "projects/demo-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/demo-app/src/environments/environment.ts",
+                  "with": "projects/demo-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "demo-app:build:production"
+            },
+            "development": {
+              "browserTarget": "demo-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "demo-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/demo-app/src/test.ts",
+            "polyfills": "projects/demo-app/src/polyfills.ts",
+            "tsConfig": "projects/demo-app/tsconfig.spec.json",
+            "karmaConfig": "projects/demo-app/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/demo-app/src/favicon.ico",
+              "projects/demo-app/src/assets"
+            ],
+            "styles": [
+              "projects/demo-app/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
   }
 }
