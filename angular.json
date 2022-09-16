@@ -23,14 +23,6 @@
             }
           },
           "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/form-gen/core/src/test.ts",
-            "tsConfig": "projects/form-gen/core/tsconfig.spec.json",
-            "karmaConfig": "projects/form-gen/core/karma.conf.js"
-          }
         }
       }
     },
@@ -54,14 +46,6 @@
             }
           },
           "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/form-gen/common-blocks/src/test.ts",
-            "tsConfig": "projects/form-gen/common-blocks/tsconfig.spec.json",
-            "karmaConfig": "projects/form-gen/common-blocks/karma.conf.js"
-          }
         }
       }
     },
@@ -85,14 +69,6 @@
             }
           },
           "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/form-gen/editor-blocks/src/test.ts",
-            "tsConfig": "projects/form-gen/editor-blocks/tsconfig.spec.json",
-            "karmaConfig": "projects/form-gen/editor-blocks/karma.conf.js"
-          }
         }
       }
     },
@@ -116,14 +92,6 @@
             }
           },
           "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/form-gen/betterco-blocks/src/test.ts",
-            "tsConfig": "projects/form-gen/betterco-blocks/tsconfig.spec.json",
-            "karmaConfig": "projects/form-gen/betterco-blocks/karma.conf.js"
-          }
         }
       }
     },
@@ -147,14 +115,6 @@
             }
           },
           "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/form-gen/admin-ui/src/test.ts",
-            "tsConfig": "projects/form-gen/admin-ui/tsconfig.spec.json",
-            "karmaConfig": "projects/form-gen/admin-ui/karma.conf.js"
-          }
         }
       }
     },
@@ -236,24 +196,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "demo-app:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/demo-app/src/test.ts",
-            "polyfills": "projects/demo-app/src/polyfills.ts",
-            "tsConfig": "projects/demo-app/tsconfig.spec.json",
-            "karmaConfig": "projects/demo-app/karma.conf.js",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/demo-app/src/favicon.ico",
-              "projects/demo-app/src/assets"
-            ],
-            "styles": [
-              "projects/demo-app/src/styles.scss"
-            ],
-            "scripts": []
           }
         }
       }
